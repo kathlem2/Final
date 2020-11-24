@@ -1,24 +1,21 @@
-# README
+# proj6-poptart: Audience Evaluation of Presentations
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+## Execution
+1. Run `rails server`
+2. Wait for a tcp port to be listed (ex. "127.0.0.1:3000")
+3. Open Firefox and go to the listed tcp port
 
-* Ruby version
+## Design Decisions
 
-* System dependencies
+## Development Information
 
-* Configuration
+## Contributors
+### Kyle (hustek.3)
 
-* Database creation
+### Paige (bormann.12)
 
-* Database initialization
+### Nate (yun.195)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Katie (maclean.72)
