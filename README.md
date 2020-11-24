@@ -1,18 +1,24 @@
-# proj6-poptart: Audience Evaluation of Presentations
+# README
 
-## Overview
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## Execution
+Things you may want to cover:
 
-## Design Decisions
+* Ruby version
 
-## Development Information
+* System dependencies
 
-## Contributors
-### Kyle (hustek.3)
+* Configuration
 
-### Paige (bormann.12)
+* Database creation
 
-### Nate (yun.195)
+* Database initialization
 
-### Katie (maclean.72)
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
