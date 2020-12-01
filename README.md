@@ -3,9 +3,10 @@
 ## Overview
 
 ## Execution
-1. Run `rails server`
-2. Wait for a tcp port to be listed (ex. "127.0.0.1:3000")
-3. Open Firefox and go to the listed tcp port
+1. Run `bundle install`
+2. Run `rails server`
+3. Wait for a tcp port to be listed (ex. "127.0.0.1:3000")
+4. Open Firefox and go to the listed tcp port
 
 ## Design Decisions
 
