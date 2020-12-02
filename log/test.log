@@ -1,0 +1,228 @@
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (11.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20201201223747)[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (5.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-12-02 18:05:20.987329"], ["updated_at", "2020-12-02 18:05:20.987329"]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (3.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "255bec64e34fed93596e529b47061defaa31c991"], ["created_at", "2020-12-02 18:05:21.006664"], ["updated_at", "2020-12-02 18:05:21.006664"]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (5.0ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "name", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-12-02 18:05:21.074815', '2020-12-02 18:05:21.074815');
+INSERT INTO "users" ("id", "name", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-12-02 18:05:21.074815', '2020-12-02 18:05:21.074815')[0m
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (1.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+UsersLoginTest: test_login_with_invalid_information
+---------------------------------------------------
+Started GET "/login" for 127.0.0.1 at 2020-12-02 13:05:21 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2290)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/daghost/proj6-poptart/public/packs-test
+[Webpacker] Hash: 938ecd4dac68dd2bd2ec
+Version: webpack 4.44.2
+Time: 2230ms
+Built at: 12/02/2020 1:05:25 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-31c0a7fd2aa09b742314.js    124 KiB  application  [emitted] [immutable]  application
+js/application-31c0a7fd2aa09b742314.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  384 bytes               [emitted]              
+Entrypoint application = js/application-31c0a7fd2aa09b742314.js js/application-31c0a7fd2aa09b742314.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 223)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 95)
+Completed 200 OK in 4679ms (Views: 4675.1ms | ActiveRecord: 0.0ms | Allocations: 90984)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (2.4ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "name", "email", "password", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', '2020-12-02 18:06:29.064091', '2020-12-02 18:06:29.064091');
+INSERT INTO "users" ("id", "name", "email", "password", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 'MyString', '2020-12-02 18:06:29.064091', '2020-12-02 18:06:29.064091')[0m
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+UsersControllerTest: test_should_create_user
+--------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2020-12-02 13:06:29 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"MyString", "name"=>"MyString", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "MyString"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.7ms | Allocations: 2048)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2460)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 95)
+Completed 200 OK in 250ms (Views: 241.9ms | ActiveRecord: 0.2ms | Allocations: 55946)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+UsersControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/users/980190962/edit" for 127.0.0.1 at 2020-12-02 13:06:29 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.8ms | Allocations: 928)
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1169)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.1ms | Allocations: 8463)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+UsersControllerTest: test_should_show_user
+------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/users/980190962" for 127.0.0.1 at 2020-12-02 13:06:29 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 278)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 68)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.1ms | Allocations: 7464)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+UsersControllerTest: test_should_destroy_user
+---------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started DELETE "/users/980190962" for 127.0.0.1 at 2020-12-02 13:06:29 -0500
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Destroy (2.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms | Allocations: 635)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+UsersControllerTest: test_should_update_user
+--------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/users/980190962" for 127.0.0.1 at 2020-12-02 13:06:29 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"email"=>"MyString", "name"=>"MyString", "password"=>"[FILTERED]"}, "id"=>"980190962"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "MyString"], ["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.4ms | Allocations: 1210)
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1316)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 66)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 24ms (Views: 18.5ms | ActiveRecord: 0.2ms | Allocations: 9767)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+UsersControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/users" for 127.0.0.1 at 2020-12-02 13:06:29 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 699)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.1ms | Allocations: 7779)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/users/new" for 127.0.0.1 at 2020-12-02 13:06:29 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.7ms | Allocations: 848)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 901)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 66)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 7843)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+UsersLoginTest: test_login_with_invalid_information
+---------------------------------------------------
+Started GET "/login" for 127.0.0.1 at 2020-12-02 13:06:29 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 780)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 68)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 30ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 8318)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+SessionsControllerTest: test_should_get_new
+-------------------------------------------
+Started GET "/login" for 127.0.0.1 at 2020-12-02 13:06:29 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 381)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 7303)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
