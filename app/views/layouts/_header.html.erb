@@ -6,8 +6,9 @@
       <li class="nav-item"><%= link_to "Home", root_path %></li>
       <% if logged_in? %>
       <% if teacher? %>
-      <li class="nav-item"><%= link_to "Roster", "#" %></li>
-      <li class="nav-item"><%= link_to "Groups", "#" %></li>
+        <li class="nav-item"><%= link_to "Presentations", "#" %></li>
+        <li class="nav-item"><%= link_to "Roster", "#" %></li>
+        <li class="nav-item"><%= link_to "Groups", "#" %></li>
       <% end %>
         <li class="nav-item-dropdown">
           <a class="nav-link-dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
