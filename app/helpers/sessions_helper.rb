@@ -22,4 +22,8 @@ module SessionsHelper
     session.delete(:user_id)
     @current_user = nil
   end
+
+  def teacher?
+    current_user.isTeacher
+  end
 end
