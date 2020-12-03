@@ -7,7 +7,7 @@
     <tr>
       <th>Name</th>
       <th>Email</th>
-      <th>Is Teacher?</th>
+      <th>Role</th>
       <th> Group ID</th>
       <th colspan="4"></th>
     </tr>
@@ -18,7 +18,13 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= user.isTeacher %></td>
+        <% if user.isTeacher %>
+          <td> Teacher </td>
+
+        <% else %>
+          <td> Student </td>
+        <% end %>
+
         <td><%= user.group_id %></td>
         <% if current_user.isTeacher %>
           <td><%= link_to 'Show', user %></td>

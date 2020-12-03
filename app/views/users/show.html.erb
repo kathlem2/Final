@@ -10,15 +10,24 @@
   <%= @user.email %>
 </p>
 
+<% if user.isTeacher %>
 <p>
-  <strong>Is Teacher?:</strong>
-  <%= @user.isTeacher %>
+  <strong>Role:</strong>
+  Teacher
+</p>
+
+<% else %>
+
+  <p>
+  <strong>Role:</strong>
+  Student
 </p>
 
 <p>
   <strong>Group Id:</strong>
   <%= @user.group_id %>
 </p>
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
