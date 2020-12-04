@@ -12,11 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.label :name, class: "form-label"%>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <br>
+
+  <div class="text-center"> 
+    <%= form.submit "Create Group", class: "btn btn-primary mb-2" %> 
   </div>
+
 <% end %>

@@ -12,16 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :group_id %>
-    <%= form.number_field :group_id %>
+    <%= form.label :group_id, class: "form-label" %>
+    <%= form.number_field :group_id, class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :topic %>
-    <%= form.text_field :topic %>
+    <%= form.label :topic, class: "form-label"  %>
+    <%= form.text_field :topic, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+<br>
+
+  <div class="text-center"> 
+    <%= form.submit "Create Presentation", class: "btn btn-primary mb-2" %> 
   </div>
 <% end %>

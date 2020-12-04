@@ -55,6 +55,7 @@ h2 {
 p {
     font-size: 1.1em;
     line-height: 1.7em;
+    color: black;
 }
 
 
@@ -123,6 +124,9 @@ ul li.dropdown-item {
     border: $primary;
     font-weight: bold;
     text-align: center;
+    padding-left: 3em;
+    padding-right: 3em;
+    margin-bottom: 2em;
     &:visited {
         background-color: $primary;
         border: $primary;
@@ -174,7 +178,8 @@ td {
     font-size: 1em;
 }
 
-td a {
+td a,
+p a {
     font-weight: bold;
     &:visited {
         color: black;
@@ -184,4 +189,10 @@ td a {
         color: $primary;
         text-decoration: underline;
     }
+}
+
+.form-label {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
 }

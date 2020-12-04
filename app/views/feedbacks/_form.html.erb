@@ -12,21 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :presentation_id %>
-    <%= form.number_field :presentation_id %>
+    <%= form.label :presentation_id, class: "form-label" %>
+    <%= form.number_field :presentation_id, class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :ranking %>
-    <%= form.number_field :ranking %>
+    <%= form.label :ranking, class: "form-label" %>
+    <%= form.number_field :ranking, class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_area :comment %>
+    <%= form.label :comment, class: "form-label" %>
+    <%= form.text_area :comment, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+<br>
+
+  <div class="text-center"> 
+    <%= form.submit "Create Feedback", class: "btn btn-primary mb-2" %> 
   </div>
 <% end %>
