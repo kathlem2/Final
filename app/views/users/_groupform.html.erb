@@ -1,8 +1,8 @@
 <%= form_for @user do |form| %>
 
   <div class="field">
-    <%= form.label :groupId %>
-    <%= form.text_field :groupId %>
+    <%= form.label :Group %>
+    <%= form.collection_select :group_id, Group.all, :id, :name %>
   </div>
 
   <div class="actions">

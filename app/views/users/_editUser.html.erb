@@ -26,22 +26,12 @@
     <%= form.text_field :password, class: "form-control" %>
   </div>
 
-  <div class="check_box">
-    <%= form.label :Teacher_Account?, class: "form-label"  %>
-    <%= form.check_box :isTeacher %>
-  </div>
 
-  <%= if logged_in? %>
-    <div class="field">
-      <%= form.label :Group, class: "form-label"  %>
-      <%= form.collection_select :group_id, Group.all, :id, :name %>
-    </div>
-  <% end %>
 
   <br>
 
   <div class="text-center"> 
-    <%= form.submit "Create User", class: "btn btn-primary mb-2" %> 
+    <%= form.submit "Save", class: "btn btn-primary mb-2" %> 
   </div>
 
 <% end %>
