@@ -15,12 +15,8 @@
             Account <b class="caret"></b>
           </a>
 
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <% if current_user.isTeacher%>
-              <li class="dropdown-item"> <%= link_to "Profile", current_user %> </li>
-            <% else %>
-              <li class="dropdown-item"> <%= link_to "My Evaluations", current_user %> </li>
-            <% end %>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li class="dropdown-item"> <%= link_to "My Evaluations", current_user %> </li>
             <li class="dropdown-item"><%= link_to "Settings", edit_user_path(current_user) %></li>
             <li class="divider"></li>
             <li class="dropdown-item">

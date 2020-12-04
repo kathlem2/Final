@@ -1,33 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+<h1>My Evaluations</h1>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+<table class="table table-striped">
+  <thead class="thead-color">
+    <tr>
+      <th>Group</th>
+      <th>Topic</th>
+      <th colspan="4">Options</th>
+    </tr>
+  </thead>
 
-<% if @user.isTeacher %>
-<p>
-  <strong>Role:</strong>
-  Teacher
-</p>
+  <tbody>
+    <% @presentations.each do |presentation| %>
+        <% if presentation.group_id == current_user.group_id %>
+          <tr>
+            <td><%= presentation.group_id %></td>
+            <td><%= presentation.topic %></td>
+            <td><%= link_to "View Feedback", feedbacks_path %></td>
+          </tr>
+        <% end %>
+    <% end %>
+  </tbody>
+</table>
 
-<% else %>
+<br>
 
-  <p>
-  <strong>Role:</strong>
-  Student
-</p>
-
-<p>
-  <strong>Group Id:</strong>
-  <%= @user.group_id %>
-</p>
-<% end %>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
