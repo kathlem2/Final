@@ -6,6 +6,10 @@
 <h2>
   An online peer evaluation tool for presentations.
 </h2>
-
+  
+  <% if logged_in? %>
+  <% else %>
   <%= link_to "Sign up now!", 'users/new', class: "btn btn-lg btn-primary" %>
+  <% end %>
+  
 </div>
