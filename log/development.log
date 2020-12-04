@@ -5225,3 +5225,366 @@ Processing by GroupsController#index as HTML
 Completed 200 OK in 62ms (Views: 57.5ms | ActiveRecord: 0.3ms | Allocations: 10049)
 
 
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/groups" for 127.0.0.1 at 2020-12-04 13:53:14 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:15
+  Rendered groups/index.html.erb within layouts/application (Duration: 39.5ms | Allocations: 4445)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 166.6ms | Allocations: 9856)
+  Rendered layouts/_footer.html.erb (Duration: 2.5ms | Allocations: 95)
+Completed 200 OK in 452ms (Views: 391.4ms | ActiveRecord: 9.4ms | Allocations: 39608)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-12-04 13:53:17 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  Rendered users/index.html.erb within layouts/application (Duration: 53.3ms | Allocations: 6637)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 234)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 185ms (Views: 108.1ms | ActiveRecord: 1.0ms | Allocations: 15767)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-12-04 13:53:18 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:15
+  Rendered groups/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 931)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.9ms | Allocations: 840)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 80ms (Views: 78.0ms | ActiveRecord: 0.4ms | Allocations: 10130)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-12-04 13:53:20 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  Rendered users/index.html.erb within layouts/application (Duration: 50.5ms | Allocations: 4255)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 4.7ms | Allocations: 227)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 113ms (Views: 111.2ms | ActiveRecord: 0.8ms | Allocations: 12834)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-04 13:53:20 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 7.3ms | Allocations: 768)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 251)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 78ms (Views: 76.4ms | ActiveRecord: 0.2ms | Allocations: 9980)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-12-04 13:53:22 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  Rendered users/index.html.erb within layouts/application (Duration: 48.9ms | Allocations: 4254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 234)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 112ms (Views: 110.4ms | ActiveRecord: 0.7ms | Allocations: 12833)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-12-04 13:53:29 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered users/_form.html.erb (Duration: 18.8ms | Allocations: 1817)
+  Rendered users/new.html.erb within layouts/application (Duration: 31.2ms | Allocations: 2776)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.2ms | Allocations: 3403)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name, class: "form-label"  %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email, class: "form-label"  %>
+    <%= form.text_field :email, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password, class: "form-label"  %>
+    <%= form.text_field :password, class: "form-control" %>
+  </div>
+
+  <div class="check_box">
+    <%= form.label :Teacher_Account?, class: "form-label"  %>
+    <%= form.check_box :isTeacher %>
+  </div>
+
+  <%= if logged_in? %>
+    <div class="field">
+      <%= form.label :Group, class: "form-label"  %>
+      <%= form.collection_select :group_id, Group.all, :id, :name %>
+    </div>
+  <% end %>
+
+  <br>
+
+  <div class="text-center"> 
+    <%= form.submit "Create User", class: "btn btn-primary mb-2" %> 
+  </div>
+
+<% end %>
+
+):
+1:    <%= form_with(model: user, local: true) do |form| %>
+2:      <% if user.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% user.errors.full_messages.each do |message| %>
+8:              <li><%= message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :name, class: "form-label"  %>
+16:        <%= form.text_field :name, class: "form-control" %>
+17:      </div>
+18:    
+19:      <div class="field">
+20:        <%= form.label :email, class: "form-label"  %>
+21:        <%= form.text_field :email, class: "form-control" %>
+22:      </div>
+23:    
+24:      <div class="field">
+25:        <%= form.label :password, class: "form-label"  %>
+26:        <%= form.text_field :password, class: "form-control" %>
+27:      </div>
+28:    
+29:      <div class="check_box">
+30:        <%= form.label :Teacher_Account?, class: "form-label"  %>
+31:        <%= form.check_box :isTeacher %>
+32:      </div>
+33:    
+34:      <%= if logged_in? %>
+35:        <div class="field">
+36:          <%= form.label :Group, class: "form-label"  %>
+37:          <%= form.collection_select :group_id, Group.all, :id, :name %>
+38:        </div>
+39:      <% end %>
+40:    
+41:      <br>
+42:    
+43:      <div class="text-center"> 
+44:        <%= form.submit "Create User", class: "btn btn-primary mb-2" %> 
+45:      </div>
+46:    
+47:    <% end %>
+  
+app/views/users/_form.html.erb:34: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/users/_form.html.erb:39: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:49: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:34: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/users/_form.html.erb:39: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:49: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:34: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/users/_form.html.erb:39: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:49: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:34: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/users/_form.html.erb:39: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:49: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:34: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/users/_form.html.erb:39: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:49: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:34: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/users/_form.html.erb:39: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/users/_form.html.erb:49: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:3
+Started GET "/users/11/edit" for 127.0.0.1 at 2020-12-04 13:53:33 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_editUser.html.erb (Duration: 118.3ms | Allocations: 24763)
+  Rendered users/edit.html.erb within layouts/application (Duration: 128.0ms | Allocations: 29863)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 19.7ms | Allocations: 4332)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 5)
+Completed 200 OK in 268ms (Views: 258.8ms | ActiveRecord: 0.7ms | Allocations: 63414)
+
+
+Started GET "/users/13/edit" for 127.0.0.1 at 2020-12-04 13:53:37 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_editUser.html.erb (Duration: 2.4ms | Allocations: 883)
+  Rendered users/edit.html.erb within layouts/application (Duration: 110.4ms | Allocations: 18597)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 124.8ms | Allocations: 16297)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 808ms (Views: 683.9ms | ActiveRecord: 0.4ms | Allocations: 117858)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-04 13:53:54 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 602)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 250)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 70ms (Views: 68.8ms | ActiveRecord: 0.2ms | Allocations: 9200)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-12-04 13:53:55 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:15
+  Rendered groups/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 921)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 9.8ms | Allocations: 839)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 81ms (Views: 79.3ms | ActiveRecord: 0.3ms | Allocations: 10113)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 13:53:58 -0500
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered presentations/index.html.erb within layouts/application (Duration: 43.5ms | Allocations: 5622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 236)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 133ms (Views: 120.9ms | ActiveRecord: 1.3ms | Allocations: 15919)
+
+
+Started GET "/feedbacks" for 127.0.0.1 at 2020-12-04 13:54:02 -0500
+Processing by FeedbacksController#index as HTML
+  Rendering feedbacks/index.html.erb within layouts/application
+  [1m[36mFeedback Load (0.3ms)[0m  [1m[34mSELECT "feedbacks".* FROM "feedbacks"[0m
+  ↳ app/views/feedbacks/index.html.erb:16
+  Rendered feedbacks/index.html.erb within layouts/application (Duration: 52.9ms | Allocations: 5363)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.1ms | Allocations: 840)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 177ms (Views: 165.4ms | ActiveRecord: 1.3ms | Allocations: 15607)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-12-04 13:54:11 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  Rendered users/index.html.erb within layouts/application (Duration: 49.3ms | Allocations: 4256)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 234)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 125ms (Views: 122.7ms | ActiveRecord: 0.7ms | Allocations: 12847)
+
+
+Started GET "/users/11/edit" for 127.0.0.1 at 2020-12-04 13:54:13 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_editUser.html.erb (Duration: 2.7ms | Allocations: 885)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1008)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.4ms | Allocations: 827)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 69ms (Views: 63.9ms | ActiveRecord: 0.3ms | Allocations: 10736)
+
+
