@@ -31,12 +31,6 @@
     <%= form.check_box :isTeacher %>
   </div>
 
-  <%= if logged_in? %>
-    <div class="field">
-      <%= form.label :Group, class: "form-label"  %>
-      <%= form.collection_select :group_id, Group.all, :id, :name %>
-    </div>
-  <% end %>
 
   <br>
 
