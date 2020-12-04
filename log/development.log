@@ -6200,3 +6200,640 @@ Processing by PresentationsController#index as HTML
 Completed 200 OK in 99ms (Views: 87.3ms | ActiveRecord: 1.0ms | Allocations: 11155)
 
 
+Started GET "/" for 127.0.0.1 at 2020-12-03 21:03:19 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 283)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 114.3ms | Allocations: 10380)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 95)
+Completed 200 OK in 339ms (Views: 302.9ms | ActiveRecord: 15.8ms | Allocations: 33861)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-03 21:03:23 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 31)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 12.1ms | Allocations: 853)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 128ms (Views: 126.9ms | ActiveRecord: 0.3ms | Allocations: 9155)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-03 21:03:28 -0500
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  Rendered presentations/index.html.erb within layouts/application (Duration: 18.9ms | Allocations: 1229)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 10.4ms | Allocations: 829)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 210ms (Views: 196.4ms | ActiveRecord: 4.1ms | Allocations: 11190)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/presentations" for 127.0.0.1 at 2020-12-03 21:12:32 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  Rendered presentations/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 1458)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 123.0ms | Allocations: 9794)
+  Rendered layouts/_footer.html.erb (Duration: 1.9ms | Allocations: 95)
+Completed 200 OK in 386ms (Views: 337.0ms | ActiveRecord: 2.2ms | Allocations: 35500)
+
+
+Started GET "/presentations/new" for 127.0.0.1 at 2020-12-03 21:12:39 -0500
+Processing by PresentationsController#new as HTML
+  Rendering presentations/new.html.erb within layouts/application
+  Rendered presentations/_form.html.erb (Duration: 58.2ms | Allocations: 2935)
+  Rendered presentations/new.html.erb within layouts/application (Duration: 63.0ms | Allocations: 3286)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 14.2ms | Allocations: 829)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 232ms (Views: 193.6ms | ActiveRecord: 0.7ms | Allocations: 14971)
+
+
+Started POST "/presentations" for 127.0.0.1 at 2020-12-03 21:12:57 -0500
+Processing by PresentationsController#create as HTML
+  Parameters: {"authenticity_token"=>"GqvkJPz2QucQKgw42T/V5M0aFy/yrEcTpIfIxI3Yfx91B3VnRj5YkJ1RcJ0VPDOxtKLoGabXeNNoGpIJPETL7Q==", "presentation"=>{"group_id"=>"-1", "topic"=>"Web development"}, "commit"=>"Create Presentation"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 841)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'group_id' for Presentation.):
+  
+app/controllers/presentations_controller.rb:27:in `create'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/presentations/new" for 127.0.0.1 at 2020-12-03 21:15:14 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PresentationsController#new as HTML
+  Rendering presentations/new.html.erb within layouts/application
+  Rendered presentations/_form.html.erb (Duration: 18.5ms | Allocations: 2877)
+  Rendered presentations/new.html.erb within layouts/application (Duration: 25.0ms | Allocations: 3356)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 173.5ms | Allocations: 9547)
+  Rendered layouts/_footer.html.erb (Duration: 6.4ms | Allocations: 95)
+Completed 200 OK in 472ms (Views: 404.6ms | ActiveRecord: 2.6ms | Allocations: 40190)
+
+
+Started POST "/presentations" for 127.0.0.1 at 2020-12-03 21:15:26 -0500
+Processing by PresentationsController#create as HTML
+  Parameters: {"authenticity_token"=>"TpSMneUolkpaOABUT6hN7+/xZwjXN2T3+V6EsSAtNnu2iHYZ/WPvS1CKnjXH4paEXeGpqUNAWDwAvdJIYLgAkA==", "presentation"=>{"group_id"=>"-1", "topic"=>"Web development"}, "commit"=>"Create Presentation"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 828)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'group_id' for Presentation.):
+  
+app/controllers/presentations_controller.rb:27:in `create'
+Started GET "/presentations" for 127.0.0.1 at 2020-12-03 21:15:44 -0500
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  Rendered presentations/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 957)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 8.4ms | Allocations: 843)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 87ms (Views: 84.3ms | ActiveRecord: 0.5ms | Allocations: 10316)
+
+
+Started GET "/presentations/new" for 127.0.0.1 at 2020-12-03 21:15:46 -0500
+Processing by PresentationsController#new as HTML
+  Rendering presentations/new.html.erb within layouts/application
+  Rendered presentations/_form.html.erb (Duration: 3.1ms | Allocations: 743)
+  Rendered presentations/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 837)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 8.0ms | Allocations: 825)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 76ms (Views: 74.2ms | ActiveRecord: 0.2ms | Allocations: 9967)
+
+
+Started POST "/presentations" for 127.0.0.1 at 2020-12-03 21:15:52 -0500
+Processing by PresentationsController#create as HTML
+  Parameters: {"authenticity_token"=>"OD4suU8MFxH2i8wCx0vlI3Xv3jICmrOqdwWa376qqQZXkr369cQNZnvwsKcLSAN2DFchBFbhjGq7mMASDzYd9A==", "presentation"=>{"group_id"=>"1", "topic"=>"Web development"}, "commit"=>"Create Presentation"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 807)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'group_id' for Presentation.):
+  
+app/controllers/presentations_controller.rb:27:in `create'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/presentations" for 127.0.0.1 at 2020-12-03 21:19:00 -0500
+  [1m[35m (8.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PresentationsController#index as HTML
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.0ms | Allocations: 1716)
+
+
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/presentation.rb:6:in `<class:Presentation>'
+app/models/presentation.rb:1:in `<main>'
+app/controllers/presentations_controller.rb:7:in `index'
+Started GET "/presentations/new" for 127.0.0.1 at 2020-12-03 21:19:02 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PresentationsController#new as HTML
+  Rendering presentations/new.html.erb within layouts/application
+  Rendered presentations/_form.html.erb (Duration: 7.5ms | Allocations: 2884)
+  Rendered presentations/new.html.erb within layouts/application (Duration: 14.8ms | Allocations: 3363)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 90.1ms | Allocations: 11389)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 95)
+Completed 200 OK in 480ms (Views: 399.0ms | ActiveRecord: 3.1ms | Allocations: 87589)
+
+
+Started POST "/presentations" for 127.0.0.1 at 2020-12-03 21:19:09 -0500
+Processing by PresentationsController#create as HTML
+  Parameters: {"authenticity_token"=>"uVfPMIIGsstxb5x/RXBNoOLu98U2XzIu9tOY/kFxdozW+15zOM6ovPwU4NqJc6v1m1YI82IkDe46TsIz8O3Cfg==", "presentation"=>{"group_id"=>"-1", "topic"=>"ajsdkfl"}, "commit"=>"Create Presentation"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 863)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'group_id' for Presentation.):
+  
+app/controllers/presentations_controller.rb:27:in `create'
+Started POST "/presentations" for 127.0.0.1 at 2020-12-03 21:19:59 -0500
+Processing by PresentationsController#create as HTML
+  Parameters: {"authenticity_token"=>"uVfPMIIGsstxb5x/RXBNoOLu98U2XzIu9tOY/kFxdozW+15zOM6ovPwU4NqJc6v1m1YI82IkDe46TsIz8O3Cfg==", "presentation"=>{"group_id"=>"1", "topic"=>"ajsdkfl"}, "commit"=>"Create Presentation"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 802)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'group_id' for Presentation.):
+  
+app/controllers/presentations_controller.rb:27:in `create'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/presentations/new" for 127.0.0.1 at 2020-12-03 21:23:49 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PresentationsController#new as HTML
+  Rendering presentations/new.html.erb within layouts/application
+  Rendered presentations/_form.html.erb (Duration: 9.3ms | Allocations: 2877)
+  Rendered presentations/new.html.erb within layouts/application (Duration: 16.1ms | Allocations: 3356)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 148.8ms | Allocations: 9547)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 95)
+Completed 200 OK in 421ms (Views: 363.0ms | ActiveRecord: 4.2ms | Allocations: 40092)
+
+
+Started POST "/presentations" for 127.0.0.1 at 2020-12-03 21:23:54 -0500
+Processing by PresentationsController#create as HTML
+  Parameters: {"authenticity_token"=>"CCbBpS+vbc7zwdVsnY4xE70SGSkSEAWhTKSUJ3P8fzbwOjshN+QUz/lzSw0VxOp4DwLXiIZnOWq1R8LeM2lJ3Q==", "presentation"=>{"group_id"=>"1", "topic"=>"web"}, "commit"=>"Create Presentation"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 830)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'group_id' for Presentation.):
+  
+app/controllers/presentations_controller.rb:27:in `create'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddGroupIdToPresentation (20201204022453)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mprimary::SchemaMigration Create (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201204022453"]]
+  [1m[35m (18.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/presentations" for 127.0.0.1 at 2020-12-03 21:25:37 -0500
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PresentationsController#create as HTML
+  Parameters: {"authenticity_token"=>"CCbBpS+vbc7zwdVsnY4xE70SGSkSEAWhTKSUJ3P8fzbwOjshN+QUz/lzSw0VxOp4DwLXiIZnOWq1R8LeM2lJ3Q==", "presentation"=>{"group_id"=>"1", "topic"=>"web"}, "commit"=>"Create Presentation"}
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 9.5ms | Allocations: 4879)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'group_id' for Presentation.):
+  
+app/controllers/presentations_controller.rb:27:in `create'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePresentations (20201204022626)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "presentations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group_id" integer, "topic" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePresentations (20201204022626)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.9ms)[0m  [1m[35mDROP TABLE "presentations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "presentations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group_id" integer, "topic" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (11.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201204022626"]]
+  [1m[35m (50.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/presentations" for 127.0.0.1 at 2020-12-03 21:30:58 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PresentationsController#create as HTML
+  Parameters: {"authenticity_token"=>"CCbBpS+vbc7zwdVsnY4xE70SGSkSEAWhTKSUJ3P8fzbwOjshN+QUz/lzSw0VxOp4DwLXiIZnOWq1R8LeM2lJ3Q==", "presentation"=>{"group_id"=>"1", "topic"=>"web"}, "commit"=>"Create Presentation"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/presentations_controller.rb:30:in `block in create'
+  [1m[36mPresentation Create (9.3ms)[0m  [1m[32mINSERT INTO "presentations" ("group_id", "topic", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["group_id", 1], ["topic", "web"], ["created_at", "2020-12-04 02:30:59.004688"], ["updated_at", "2020-12-04 02:30:59.004688"]]
+  ↳ app/controllers/presentations_controller.rb:30:in `block in create'
+  [1m[35m (16.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/presentations_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/presentations/1
+Completed 302 Found in 184ms (ActiveRecord: 26.6ms | Allocations: 9348)
+
+
+Started GET "/presentations/1" for 127.0.0.1 at 2020-12-03 21:30:59 -0500
+Processing by PresentationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPresentation Load (4.8ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" WHERE "presentations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/presentations_controller.rb:67:in `set_presentation'
+  Rendering presentations/show.html.erb within layouts/application
+  Rendered presentations/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 387)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 100.8ms | Allocations: 9504)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 95)
+Completed 200 OK in 304ms (Views: 287.4ms | ActiveRecord: 6.3ms | Allocations: 34350)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-03 21:31:01 -0500
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  Rendered presentations/index.html.erb within layouts/application (Duration: 14.9ms | Allocations: 1073)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 22.4ms | Allocations: 829)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 132ms (Views: 130.0ms | ActiveRecord: 0.4ms | Allocations: 10339)
+
+
+Started GET "/presentations/new" for 127.0.0.1 at 2020-12-03 21:31:03 -0500
+Processing by PresentationsController#new as HTML
+  Rendering presentations/new.html.erb within layouts/application
+  Rendered presentations/_form.html.erb (Duration: 32.5ms | Allocations: 2666)
+  Rendered presentations/new.html.erb within layouts/application (Duration: 35.0ms | Allocations: 3021)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 11.9ms | Allocations: 835)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 109ms (Views: 103.8ms | ActiveRecord: 0.2ms | Allocations: 12293)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/presentations/new" for 127.0.0.1 at 2020-12-03 21:33:52 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PresentationsController#new as HTML
+  Rendering presentations/new.html.erb within layouts/application
+  Rendered presentations/_form.html.erb (Duration: 17.3ms | Allocations: 2762)
+  Rendered presentations/new.html.erb within layouts/application (Duration: 20.3ms | Allocations: 3241)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 142.9ms | Allocations: 9516)
+  Rendered layouts/_footer.html.erb (Duration: 2.1ms | Allocations: 95)
+Completed 200 OK in 475ms (Views: 403.1ms | ActiveRecord: 9.6ms | Allocations: 40703)
+
+
+Started POST "/presentations" for 127.0.0.1 at 2020-12-03 21:34:03 -0500
+Processing by PresentationsController#create as HTML
+  Parameters: {"authenticity_token"=>"wLjz8f+26kUFILTJ0VSWsNmvtTL8lrUhsSjXzCs31l44pAl15/2TRA+SKqhZHk3ba797k2jhiepIy4E1a6LgtQ==", "presentation"=>{"group_id"=>"-1", "topic"=>""}, "commit"=>"Create Presentation"}
+  [1m[35m (9.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/presentations_controller.rb:30:in `block in create'
+  [1m[36mGroup Load (1.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", -1], ["LIMIT", 1]]
+  ↳ app/controllers/presentations_controller.rb:30:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/presentations_controller.rb:30:in `block in create'
+Completed 500 Internal Server Error in 248ms (ActiveRecord: 12.0ms | Allocations: 10529)
+
+
+  
+NoMethodError (undefined method `group_id_exists' for #<Presentation:0x0000557e4ac61560>
+Did you mean?  group_id):
+  
+app/controllers/presentations_controller.rb:30:in `block in create'
+app/controllers/presentations_controller.rb:29:in `create'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/presentations" for 127.0.0.1 at 2020-12-03 21:35:09 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PresentationsController#create as HTML
+  Parameters: {"authenticity_token"=>"wLjz8f+26kUFILTJ0VSWsNmvtTL8lrUhsSjXzCs31l44pAl15/2TRA+SKqhZHk3ba797k2jhiepIy4E1a6LgtQ==", "presentation"=>{"group_id"=>"-1", "topic"=>""}, "commit"=>"Create Presentation"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/presentations_controller.rb:30:in `block in create'
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", -1], ["LIMIT", 1]]
+  ↳ app/controllers/presentations_controller.rb:30:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/presentations_controller.rb:30:in `block in create'
+  Rendering presentations/new.html.erb within layouts/application
+  Rendered presentations/_form.html.erb (Duration: 9.6ms | Allocations: 1918)
+  Rendered presentations/new.html.erb within layouts/application (Duration: 16.3ms | Allocations: 2394)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 84.2ms | Allocations: 9204)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 95)
+Completed 200 OK in 532ms (Views: 308.9ms | ActiveRecord: 4.1ms | Allocations: 48716)
+
+
+Started POST "/presentations" for 127.0.0.1 at 2020-12-03 21:35:21 -0500
+Processing by PresentationsController#create as HTML
+  Parameters: {"authenticity_token"=>"sIY54NSx5Kno8WxMJvEq3n1SCp9pno/72dwffCC7D0tImsNkzPqdqOJD8i2uu/G1z0LEPv3pszAgP0mFYC45oA==", "presentation"=>{"group_id"=>"1", "topic"=>"Web Development"}, "commit"=>"Create Presentation"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/presentations_controller.rb:30:in `block in create'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/presentations_controller.rb:30:in `block in create'
+  [1m[36mPresentation Create (4.0ms)[0m  [1m[32mINSERT INTO "presentations" ("group_id", "topic", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["group_id", 1], ["topic", "Web Development"], ["created_at", "2020-12-04 02:35:21.263629"], ["updated_at", "2020-12-04 02:35:21.263629"]]
+  ↳ app/controllers/presentations_controller.rb:30:in `block in create'
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/presentations_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/presentations/2
+Completed 302 Found in 151ms (ActiveRecord: 14.4ms | Allocations: 8543)
+
+
+Started GET "/presentations/2" for 127.0.0.1 at 2020-12-03 21:35:21 -0500
+Processing by PresentationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPresentation Load (0.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" WHERE "presentations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/presentations_controller.rb:67:in `set_presentation'
+  Rendering presentations/show.html.erb within layouts/application
+  Rendered presentations/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 265)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 15.0ms | Allocations: 1155)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 89)
+Completed 200 OK in 89ms (Views: 78.8ms | ActiveRecord: 0.4ms | Allocations: 12119)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-03 21:35:23 -0500
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.4ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  Rendered presentations/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 12.5ms | Allocations: 827)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 92ms (Views: 90.0ms | ActiveRecord: 0.6ms | Allocations: 10461)
+
+
+Started DELETE "/presentations/1" for 127.0.0.1 at 2020-12-03 21:35:27 -0500
+Processing by PresentationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Wtk7vJeRUtqaqCifAxOx1L/nVwTPPj4vOQewdp0htMKixcE4j9or25Aatv6LWWq/DfeZpVtJAuTA5OaP3bSCKQ==", "id"=>"1"}
+  [1m[36mPresentation Load (0.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" WHERE "presentations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/presentations_controller.rb:67:in `set_presentation'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/presentations_controller.rb:57:in `destroy'
+  [1m[36mPresentation Destroy (4.9ms)[0m  [1m[31mDELETE FROM "presentations" WHERE "presentations"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/presentations_controller.rb:57:in `destroy'
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/presentations_controller.rb:57:in `destroy'
+Redirected to http://localhost:3000/presentations
+Completed 302 Found in 93ms (ActiveRecord: 15.3ms | Allocations: 4942)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-03 21:35:27 -0500
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  Rendered presentations/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 1122)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 13.3ms | Allocations: 817)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 161ms (Views: 157.7ms | ActiveRecord: 0.4ms | Allocations: 10231)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-12-03 21:35:31 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:31
+  Rendered users/index.html.erb within layouts/application (Duration: 33.9ms | Allocations: 4443)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 221)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 95ms (Views: 83.8ms | ActiveRecord: 3.7ms | Allocations: 13485)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-12-03 21:35:32 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:15
+  Rendered groups/index.html.erb within layouts/application (Duration: 20.0ms | Allocations: 1101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 8.0ms | Allocations: 826)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 88ms (Views: 81.8ms | ActiveRecord: 0.5ms | Allocations: 10835)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-12-03 21:35:38 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:31
+  Rendered users/index.html.erb within layouts/application (Duration: 44.9ms | Allocations: 3232)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 221)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 93ms (Views: 90.9ms | ActiveRecord: 0.7ms | Allocations: 11751)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-12-03 21:35:39 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (2.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:15
+  Rendered groups/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 789)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.2ms | Allocations: 818)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 81ms (Views: 77.4ms | ActiveRecord: 2.5ms | Allocations: 9912)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-12-03 21:35:39 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:15
+  Rendered groups/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 779)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 9.9ms | Allocations: 817)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 66ms (Views: 65.0ms | ActiveRecord: 0.4ms | Allocations: 9882)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-03 21:35:41 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 156)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 9.3ms | Allocations: 843)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 83ms (Views: 77.9ms | ActiveRecord: 0.2ms | Allocations: 9888)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-12-03 21:35:57 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:15
+  Rendered groups/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 788)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.7ms | Allocations: 826)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 85ms (Views: 83.2ms | ActiveRecord: 0.4ms | Allocations: 9902)
+
+
+Started GET "/groups" for 127.0.0.1 at 2020-12-03 21:36:15 -0500
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:15
+  Rendered groups/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 779)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.5ms | Allocations: 817)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 83ms (Views: 80.6ms | ActiveRecord: 0.4ms | Allocations: 9892)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-03 21:36:24 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 29)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 10.3ms | Allocations: 826)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 69ms (Views: 67.6ms | ActiveRecord: 0.2ms | Allocations: 9129)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-12-03 21:36:27 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:31
+  Rendered users/index.html.erb within layouts/application (Duration: 45.1ms | Allocations: 3232)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 221)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 96ms (Views: 94.0ms | ActiveRecord: 0.6ms | Allocations: 11735)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-12-03 21:36:29 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:31
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:31
+  Rendered users/index.html.erb within layouts/application (Duration: 42.4ms | Allocations: 3222)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 215)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 93ms (Views: 91.7ms | ActiveRecord: 0.6ms | Allocations: 11741)
+
+
