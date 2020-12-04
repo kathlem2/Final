@@ -1,4 +1,8 @@
+<% if logged_in? %> 
+<h1>Add New User</h1>
+<% else %>
 <h1>Sign Up</h1>
+<% end %>
 
 <%= render 'form', user: @user %>
 
