@@ -122,6 +122,7 @@ ul li.dropdown-item {
     background-color: $primary;
     border: $primary;
     font-weight: bold;
+    text-align: center;
     &:visited {
         background-color: $primary;
         border: $primary;
@@ -159,5 +160,28 @@ footer {
             float: left;
             margin-left: 15px;
         }
+    }
+}
+
+.thead-color {
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: $primary;
+    color: white;
+}
+
+td {
+    font-size: 1em;
+}
+
+td a {
+    font-weight: bold;
+    &:visited {
+        color: black;
+    }
+    &:hover {
+        background-color: white;
+        color: $primary;
+        text-decoration: underline;
     }
 }
