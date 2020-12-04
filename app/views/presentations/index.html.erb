@@ -19,7 +19,11 @@
         <td><%= link_to 'Show', presentation %></td>
         <td><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
         <td><%= link_to 'Destroy', presentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to "Complete Feedback", new_feedback_path %></td>
+        <% if current_user.isTeacher %>
+          <td><%= link_to "View Feedback", feedbacks_path %></td>
+        <% else %>
+          <td><%= link_to "Complete Feedback", new_feedback_path %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
