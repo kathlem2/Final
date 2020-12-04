@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :presentation_id, class: "form-label" %>
-    <%= form.number_field :presentation_id, class: "form-control" %>
+    <%= form.label :presentation, class: "form-label" %>
+    <%= form.collection_select :presentation_id, Presentation.all, :id, :topic %>
   </div>
 
   <div class="field">
