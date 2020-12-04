@@ -8,8 +8,9 @@
       <th>Name</th>
       <th>Email</th>
       <th>Role</th>
-      <th> Group ID</th>
-      <th colspan="4"></th>
+      <th>Group ID</th>
+      <th>Group Name</th>
+      <th colspan="5"></th>
     </tr>
   </thead>
 
@@ -26,6 +27,12 @@
         <% end %>
 
         <td><%= user.group_id %></td>
+        <% if (user.group_id != nil) %>
+          <td><%= user.group.name %></td>
+        <% else %>
+          <td>  </td>
+        <% end %>
+
         <% if current_user.isTeacher %>
           <td><%= link_to 'Show', user %></td>
           <td><%= link_to 'Edit', edit_user_path(user) %></td>
