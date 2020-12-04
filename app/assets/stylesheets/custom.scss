@@ -55,6 +55,7 @@ h2 {
 p {
     font-size: 1.1em;
     line-height: 1.7em;
+    color: black;
 }
 
 
@@ -122,6 +123,10 @@ ul li.dropdown-item {
     background-color: $primary;
     border: $primary;
     font-weight: bold;
+    text-align: center;
+    padding-left: 3em;
+    padding-right: 3em;
+    margin-bottom: 2em;
     &:visited {
         background-color: $primary;
         border: $primary;
@@ -160,4 +165,34 @@ footer {
             margin-left: 15px;
         }
     }
+}
+
+.thead-color {
+    font-size: 1.1em;
+    font-weight: bold;
+    background-color: $primary;
+    color: white;
+}
+
+td {
+    font-size: 1em;
+}
+
+td a,
+p a {
+    font-weight: bold;
+    &:visited {
+        color: black;
+    }
+    &:hover {
+        background-color: white;
+        color: $primary;
+        text-decoration: underline;
+    }
+}
+
+.form-label {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
 }
