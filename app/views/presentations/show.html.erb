@@ -10,5 +10,14 @@
   <%= @presentation.topic %>
 </p>
 
+<p>
+    <% if @presentation.feedbacks.any? %>
+      <strong>Feedback (<%= @presentation.feedbacks.count %>):</strong>
+      <ol class="feedbacks">
+        <%= render @feedbacks %>
+      </ol>
+    <% end %>
+</p>
+
 <%= link_to 'Edit', edit_presentation_path(@presentation) %> |
 <%= link_to 'Back', presentations_path %>
