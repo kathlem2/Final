@@ -10,6 +10,7 @@ class PresentationsController < ApplicationController
   # GET /presentations/1
   # GET /presentations/1.json
   def show
+    @feedbacks = @presentation.feedbacks
   end
 
   # GET /presentations/new
