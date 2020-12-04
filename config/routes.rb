@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :presentations
   resources :groups
   get '/signup', to: 'users#new'
   get '/login', to: 'sessions#new'

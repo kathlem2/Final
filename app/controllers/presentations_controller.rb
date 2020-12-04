@@ -1,5 +1,5 @@
 class PresentationsController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy] #don't know what this does?
+  before_action :set_presentation, only: [:show, :edit, :update, :destroy]
 
   # GET /presentations
   # GET /presentations.json
@@ -17,10 +17,38 @@ class PresentationsController < ApplicationController
     @presentation = Presentation.new
   end
 
+  # GET /presentations/1/edit
+  def edit
+  end
+
   # POST /presentations
   # POST /presentations.json
   def create
     @presentation = Presentation.new(presentation_params)
+
+    respond_to do |format|
+      if @presentation.save
+        format.html { redirect_to @presentation, notice: 'Presentation was successfully created.' }
+        format.json { render :show, status: :created, location: @presentation }
+      else
+        format.html { render :new }
+        format.json { render json: @presentation.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH/PUT /presentations/1
+  # PATCH/PUT /presentations/1.json
+  def update
+    respond_to do |format|
+      if @presentation.update(presentation_params)
+        format.html { redirect_to @presentation, notice: 'Presentation was successfully updated.' }
+        format.json { render :show, status: :ok, location: @presentation }
+      else
+        format.html { render :edit }
+        format.json { render json: @presentation.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # DELETE /presentations/1
@@ -41,6 +69,6 @@ class PresentationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def presentation_params
-      params.require(:presentation).permit(:topic, :group_id)
+      params.require(:presentation).permit(:group_id, :topic)
     end
 end

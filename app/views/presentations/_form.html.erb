@@ -1,10 +1,10 @@
-<%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
+<%= form_with(model: presentation, local: true) do |form| %>
+  <% if presentation.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2><%= pluralize(presentation.errors.count, "error") %> prohibited this presentation from being saved:</h2>
 
       <ul>
-        <% user.errors.full_messages.each do |message| %>
+        <% presentation.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
@@ -12,28 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.label :group_id %>
+    <%= form.number_field :group_id %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.text_field :password %>
-  </div>
-
-  <div class="check_box">
-    <%= form.label :Are_you_a_teacher? %>
-    <%= form.check_box :isTeacher %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Group_ID %>
-    <%= form.text_field :group_id %>
+    <%= form.label :topic %>
+    <%= form.text_field :topic %>
   </div>
 
   <div class="actions">
