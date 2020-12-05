@@ -26,6 +26,7 @@ class FeedbacksController < ApplicationController
   def create
     @feedback = Feedback.new(feedback_params)
 
+    @feedback.user_id = current_user.id if current_user
     respond_to do |format|
       if @feedback.save
         format.html { redirect_to @feedback, notice: 'Feedback was successfully created.' }
@@ -69,6 +70,6 @@ class FeedbacksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def feedback_params
-      params.require(:feedback).permit(:presentation_id, :ranking, :comment)
+      params.require(:feedback).permit(:presentation_id, :ranking, :comment, :user_id)
     end
 end
