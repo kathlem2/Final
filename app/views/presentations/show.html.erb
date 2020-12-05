@@ -6,6 +6,19 @@
   <strong>Group:</strong> <%= @presentation.group.name %>
 </p>
 
+<% total_ranking = 0 %>
+<% count = 0 %>
+<% @presentation.feedbacks.each do |feedback| %>
+  <% total_ranking = total_ranking + feedback.ranking %>
+  <% count = count + 1 %>
+<% end %>
+
+<% if count > 0 %>
+  <p class="show-field">
+    <strong>Average Ranking:</strong> <%= total_ranking / count %>
+  </p>
+<% end %>
+
 <p class="show-field"><strong>Feedback: </strong></p>
 <% if @presentation.feedbacks.any? %>
   <table class="table table-striped">
