@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :ranking, class: "form-label" %>
-    <%= form.number_field :ranking, class: "form-control", max: 10, min: 0 %>
+    <%= form.select :ranking, options_for_select([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]) %>
   </div>
 
   <div class="field">

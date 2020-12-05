@@ -19001,3 +19001,856 @@ Processing by FeedbacksController#show as HTML
 Completed 200 OK in 70ms (Views: 59.2ms | ActiveRecord: 0.4ms | Allocations: 10091)
 
 
+Started DELETE "/logout" for 127.0.0.1 at 2020-12-04 19:45:24 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wIz0z2c8U7LnsU7r2+zpkQ0h+ygbGTZQ7lI6jKKUaC8zL0uCVkr9aq7eCP7whuWDNnZOdriSyJVc/Zq+ftx92w=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 0.0ms | Allocations: 492)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-04 19:45:24 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 328)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 5.1ms | Allocations: 445)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 95)
+Completed 200 OK in 339ms (Views: 329.8ms | ActiveRecord: 0.0ms | Allocations: 25555)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-12-04 19:45:28 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 2085)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms | Allocations: 5385)
+
+
+  
+ActionView::Template::Error (undefined method `isTeacher' for nil:NilClass):
+    10:       <th>Role</th>
+    11:       <th>Group ID</th>
+    12:       <th>Group Name</th>
+    13:       <% if current_user.isTeacher %>
+    14:         <th colspan="3">Options</th>
+    15:       <% end %>
+    16:     </tr>
+  
+app/views/users/index.html.erb:13
+Started GET "/login" for 127.0.0.1 at 2020-12-04 19:53:02 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2455)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 6.7ms | Allocations: 436)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 95)
+Completed 200 OK in 268ms (Views: 237.2ms | ActiveRecord: 0.0ms | Allocations: 26518)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-12-04 19:53:07 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"3G9xwzf/FGwBIxBGveWHPD0OlqQO/Q9B352NpGWW2OmYqnpDWDFrT8in8XQu5G0axguBFplDOl9o94burfk+sw==", "session"=>{"email"=>"sivilotti@paul", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sivilotti@paul"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 402ms (ActiveRecord: 1.6ms | Allocations: 10967)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2020-12-04 19:53:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 358)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.3ms | Allocations: 963)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 98ms (Views: 92.3ms | ActiveRecord: 0.5ms | Allocations: 11009)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-12-04 19:53:12 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  Rendered users/index.html.erb within layouts/application (Duration: 96.1ms | Allocations: 10731)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 6.8ms | Allocations: 231)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 187ms (Views: 183.6ms | ActiveRecord: 1.9ms | Allocations: 19381)
+
+
+Started GET "/users/14/edit" for 127.0.0.1 at 2020-12-04 19:53:16 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71:in `set_user'
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/users/_teacheredit.html.erb:26
+  Rendered users/_teacheredit.html.erb (Duration: 32.9ms | Allocations: 2268)
+  Rendered users/edit.html.erb within layouts/application (Duration: 68.5ms | Allocations: 3218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 5.5ms | Allocations: 234)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 209ms (Views: 194.5ms | ActiveRecord: 0.7ms | Allocations: 12537)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-12-04 19:53:20 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/users/_form.html.erb:36
+  Rendered users/_form.html.erb (Duration: 140.6ms | Allocations: 5069)
+  Rendered users/new.html.erb within layouts/application (Duration: 185.1ms | Allocations: 6036)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 235)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 245ms (Views: 242.8ms | ActiveRecord: 0.4ms | Allocations: 14690)
+
+
+Started GET "/users/16/edit" for 127.0.0.1 at 2020-12-04 19:53:31 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71:in `set_user'
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/users/_teacheredit.html.erb:26
+  Rendered users/_teacheredit.html.erb (Duration: 23.2ms | Allocations: 1647)
+  Rendered users/edit.html.erb within layouts/application (Duration: 33.6ms | Allocations: 2311)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 223)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 104ms (Views: 93.8ms | ActiveRecord: 0.6ms | Allocations: 11438)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 19:55:23 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (1.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:18
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:18
+  Rendered presentations/index.html.erb within layouts/application (Duration: 317.5ms | Allocations: 21964)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 644)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 95)
+Completed 200 OK in 712ms (Views: 653.4ms | ActiveRecord: 13.7ms | Allocations: 47971)
+
+
+Started GET "/presentations/new" for 127.0.0.1 at 2020-12-04 19:55:27 -0500
+Processing by PresentationsController#new as HTML
+  Rendering presentations/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/presentations/_form.html.erb:16
+  Rendered presentations/_form.html.erb (Duration: 36.1ms | Allocations: 3383)
+  Rendered presentations/new.html.erb within layouts/application (Duration: 38.0ms | Allocations: 3686)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 21.0ms | Allocations: 837)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 138ms (Views: 135.2ms | ActiveRecord: 0.4ms | Allocations: 13039)
+
+
+Started GET "/presentations/new" for 127.0.0.1 at 2020-12-04 19:55:32 -0500
+Processing by PresentationsController#new as HTML
+  Rendering presentations/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/presentations/_form.html.erb:16
+  Rendered presentations/_form.html.erb (Duration: 40.6ms | Allocations: 1412)
+  Rendered presentations/new.html.erb within layouts/application (Duration: 41.6ms | Allocations: 1484)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 19.0ms | Allocations: 826)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 192ms (Views: 189.8ms | ActiveRecord: 0.4ms | Allocations: 10688)
+
+
+Started GET "/presentations/new" for 127.0.0.1 at 2020-12-04 19:59:12 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PresentationsController#new as HTML
+  Rendering presentations/new.html.erb within layouts/application
+  Rendered presentations/_form.html.erb (Duration: 22.0ms | Allocations: 1659)
+  Rendered presentations/new.html.erb within layouts/application (Duration: 38.7ms | Allocations: 2089)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 1.9ms | Allocations: 9522)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: presentation, local: true) do |form| %>
+  <% if presentation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(presentation.errors.count, "error") %> prohibited this presentation from being saved:</h2>
+
+      <ul>
+        <% presentation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :group_id, class: "form-label" %>
+    <%= form.collection_select :group_id, Group.all, :id, :name } %>
+  </div>
+
+  <div class="field">
+    <%= form.label :topic, class: "form-label"  %>
+    <%= form.text_field :topic, class: "form-control" %>
+  </div>
+
+<br>
+
+  <div class="text-center"> 
+    <%= form.submit "Create Presentation", class: "btn btn-primary mb-2" %> 
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: presentation, local: true) do |form| %>
+2:      <% if presentation.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(presentation.errors.count, "error") %> prohibited this presentation from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% presentation.errors.full_messages.each do |message| %>
+8:              <li><%= message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :group_id, class: "form-label" %>
+16:        <%= form.collection_select :group_id, Group.all, :id, :name } %>
+17:      </div>
+18:    
+19:      <div class="field">
+20:        <%= form.label :topic, class: "form-label"  %>
+21:        <%= form.text_field :topic, class: "form-control" %>
+22:      </div>
+23:    
+24:    <br>
+25:    
+26:      <div class="text-center"> 
+27:        <%= form.submit "Create Presentation", class: "btn btn-primary mb-2" %> 
+28:      </div>
+29:    <% end %>
+  
+app/views/presentations/_form.html.erb:16: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/presentations/_form.html.erb:29: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:16: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/presentations/_form.html.erb:29: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:16: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/presentations/_form.html.erb:29: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:16: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/presentations/_form.html.erb:29: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:16: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/presentations/_form.html.erb:29: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:16: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/presentations/_form.html.erb:29: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/presentations/new.html.erb:3
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 19:59:34 -0500
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:18
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:18
+  Rendered presentations/index.html.erb within layouts/application (Duration: 174.9ms | Allocations: 20347)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 12.6ms | Allocations: 644)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 95)
+Completed 200 OK in 435ms (Views: 429.8ms | ActiveRecord: 2.9ms | Allocations: 43240)
+
+
+Started GET "/presentations/new" for 127.0.0.1 at 2020-12-04 19:59:36 -0500
+Processing by PresentationsController#new as HTML
+  Rendering presentations/new.html.erb within layouts/application
+  Rendered presentations/_form.html.erb (Duration: 4.2ms | Allocations: 1343)
+  Rendered presentations/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1418)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 1908)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: presentation, local: true) do |form| %>
+  <% if presentation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(presentation.errors.count, "error") %> prohibited this presentation from being saved:</h2>
+
+      <ul>
+        <% presentation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :group_id, class: "form-label" %>
+    <%= form.collection_select :group_id, Group.all, :id, :name } %>
+  </div>
+
+  <div class="field">
+    <%= form.label :topic, class: "form-label"  %>
+    <%= form.text_field :topic, class: "form-control" %>
+  </div>
+
+<br>
+
+  <div class="text-center"> 
+    <%= form.submit "Create Presentation", class: "btn btn-primary mb-2" %> 
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: presentation, local: true) do |form| %>
+2:      <% if presentation.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(presentation.errors.count, "error") %> prohibited this presentation from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% presentation.errors.full_messages.each do |message| %>
+8:              <li><%= message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :group_id, class: "form-label" %>
+16:        <%= form.collection_select :group_id, Group.all, :id, :name } %>
+17:      </div>
+18:    
+19:      <div class="field">
+20:        <%= form.label :topic, class: "form-label"  %>
+21:        <%= form.text_field :topic, class: "form-control" %>
+22:      </div>
+23:    
+24:    <br>
+25:    
+26:      <div class="text-center"> 
+27:        <%= form.submit "Create Presentation", class: "btn btn-primary mb-2" %> 
+28:      </div>
+29:    <% end %>
+  
+app/views/presentations/_form.html.erb:16: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/presentations/_form.html.erb:29: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:16: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/presentations/_form.html.erb:29: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:16: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/presentations/_form.html.erb:29: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:16: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/presentations/_form.html.erb:29: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:16: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/presentations/_form.html.erb:29: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:16: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/views/presentations/_form.html.erb:29: syntax error, unexpected end, expecting ')'
+app/views/presentations/_form.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/presentations/new.html.erb:3
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 19:59:38 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:18
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:18
+  Rendered presentations/index.html.erb within layouts/application (Duration: 321.8ms | Allocations: 74537)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 233)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 776ms (Views: 773.9ms | ActiveRecord: 0.9ms | Allocations: 164630)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 20:02:27 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (1.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:18
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:18
+  Rendered presentations/index.html.erb within layouts/application (Duration: 221.9ms | Allocations: 21964)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 644)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 95)
+Completed 200 OK in 575ms (Views: 536.6ms | ActiveRecord: 5.4ms | Allocations: 48001)
+
+
+Started GET "/presentations/new" for 127.0.0.1 at 2020-12-04 20:02:30 -0500
+Processing by PresentationsController#new as HTML
+  Rendering presentations/new.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/presentations/_form.html.erb:16
+  Rendered presentations/_form.html.erb (Duration: 21.2ms | Allocations: 3364)
+  Rendered presentations/new.html.erb within layouts/application (Duration: 24.8ms | Allocations: 3667)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 18.4ms | Allocations: 837)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 154ms (Views: 152.0ms | ActiveRecord: 0.5ms | Allocations: 13014)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 20:06:37 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:18
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:18
+  Rendered presentations/index.html.erb within layouts/application (Duration: 238.5ms | Allocations: 21964)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 6.6ms | Allocations: 644)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 95)
+Completed 200 OK in 573ms (Views: 510.0ms | ActiveRecord: 8.4ms | Allocations: 47957)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2020-12-04 20:06:43 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"f6qxmhyprIFc8pR39SHhGRPVAYjhCflz6zONl16RRbqMCQ7XLd8CWRWd0mLeS+0LKIK01kKCB7ZZnC2lgtlQTg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 409)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-04 20:06:43 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 94)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 174ms (Views: 160.6ms | ActiveRecord: 0.0ms | Allocations: 9221)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2020-12-04 20:06:44 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_signup.html.erb (Duration: 66.8ms | Allocations: 3281)
+  Rendered users/new.html.erb within layouts/application (Duration: 75.7ms | Allocations: 3647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 83)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 192ms (Views: 181.0ms | ActiveRecord: 0.0ms | Allocations: 12736)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-12-04 20:06:47 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 876)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 82)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 89ms (Views: 83.3ms | ActiveRecord: 0.0ms | Allocations: 9873)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-12-04 20:06:53 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"0KdS1VANRj2QKcLhwEt8u0cOHEwInIAwzdaTuKvKGpeUYllVP8M5HlmtI9NTSpadvAsL/p8itS56vJjyY6X8zQ==", "session"=>{"email"=>"test@test", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/17
+Completed 302 Found in 389ms (ActiveRecord: 0.3ms | Allocations: 1154)
+
+
+Started GET "/users/17" for 127.0.0.1 at 2020-12-04 20:06:54 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 357)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.7ms | Allocations: 826)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 90ms (Views: 76.6ms | ActiveRecord: 0.4ms | Allocations: 10332)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 20:06:56 -0500
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:29
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:29
+  Rendered presentations/index.html.erb within layouts/application (Duration: 42.3ms | Allocations: 3047)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 210)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 101ms (Views: 99.0ms | ActiveRecord: 0.7ms | Allocations: 11618)
+
+
+Started GET "/feedbacks/new" for 127.0.0.1 at 2020-12-04 20:06:58 -0500
+Processing by FeedbacksController#new as HTML
+  Rendering feedbacks/new.html.erb within layouts/application
+  Rendered feedbacks/_form.html.erb (Duration: 8.8ms | Allocations: 1683)
+  Rendered feedbacks/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1988)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 1.0ms | Allocations: 8879)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: feedback, local: true) do |form| %>
+  <% if feedback.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(feedback.errors.count, "error") %> prohibited this feedback from being saved:</h2>
+
+      <ul>
+        <% feedback.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :presentation, class: "form-label" %>
+    <%= form.collection_select :presentation_id, Presentation.all, :id, :topic, class: "form-control" %>
+  </div>
+
+  <% SCORES = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] %>
+  <div class="field">
+    <%= form.label :ranking, class: "form-label" %>
+    <%= form.select :ranking, options_for_select(SCORES) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment, class: "form-label" %>
+    <%= form.text_area :comment, class: "form-control"%>
+  </div>
+
+<br>
+
+  <div class="text-center"> 
+    <%= form.submit "Create Feedback", class: "btn btn-primary mb-2" %> 
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: feedback, local: true) do |form| %>
+2:      <% if feedback.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(feedback.errors.count, "error") %> prohibited this feedback from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% feedback.errors.full_messages.each do |message| %>
+8:              <li><%= message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :presentation, class: "form-label" %>
+16:        <%= form.collection_select :presentation_id, Presentation.all, :id, :topic, class: "form-control" %>
+17:      </div>
+18:    
+19:      <% SCORES = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] %>
+20:      <div class="field">
+21:        <%= form.label :ranking, class: "form-label" %>
+22:        <%= form.select :ranking, options_for_select(SCORES) %>
+23:      </div>
+24:    
+25:      <div class="field">
+26:        <%= form.label :comment, class: "form-label" %>
+27:        <%= form.text_area :comment, class: "form-control"%>
+28:      </div>
+29:    
+30:    <br>
+31:    
+32:      <div class="text-center"> 
+33:        <%= form.submit "Create Feedback", class: "btn btn-primary mb-2" %> 
+34:      </div>
+35:    <% end %>
+  
+app/views/feedbacks/_form.html.erb:19: dynamic constant assignment
+app/views/feedbacks/_form.html.erb:19: dynamic constant assignment
+app/views/feedbacks/_form.html.erb:19: dynamic constant assignment
+app/views/feedbacks/_form.html.erb:19: dynamic constant assignment
+app/views/feedbacks/_form.html.erb:19: dynamic constant assignment
+app/views/feedbacks/_form.html.erb:19: dynamic constant assignment
+app/views/feedbacks/new.html.erb:3
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 20:09:44 -0500
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:29
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:29
+  Rendered presentations/index.html.erb within layouts/application (Duration: 41.1ms | Allocations: 3075)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 210)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 102ms (Views: 100.3ms | ActiveRecord: 0.7ms | Allocations: 11696)
+
+
+Started GET "/feedbacks/new" for 127.0.0.1 at 2020-12-04 20:10:13 -0500
+Processing by FeedbacksController#new as HTML
+  Rendering feedbacks/new.html.erb within layouts/application
+  Rendered feedbacks/_form.html.erb (Duration: 4.5ms | Allocations: 1399)
+  Rendered feedbacks/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1473)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 1947)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: feedback, local: true) do |form| %>
+  <% if feedback.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(feedback.errors.count, "error") %> prohibited this feedback from being saved:</h2>
+
+      <ul>
+        <% feedback.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :presentation, class: "form-label" %>
+    <%= form.collection_select :presentation_id, Presentation.all, :id, :topic, class: "form-control" %>
+  </div>
+
+  <% SCORES = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] %>
+  <div class="field">
+    <%= form.label :ranking, class: "form-label" %>
+    <%= form.select :ranking, options_for_select(SCORES) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment, class: "form-label" %>
+    <%= form.text_area :comment, class: "form-control"%>
+  </div>
+
+<br>
+
+  <div class="text-center"> 
+    <%= form.submit "Create Feedback", class: "btn btn-primary mb-2" %> 
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: feedback, local: true) do |form| %>
+2:      <% if feedback.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(feedback.errors.count, "error") %> prohibited this feedback from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% feedback.errors.full_messages.each do |message| %>
+8:              <li><%= message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field">
+15:        <%= form.label :presentation, class: "form-label" %>
+16:        <%= form.collection_select :presentation_id, Presentation.all, :id, :topic, class: "form-control" %>
+17:      </div>
+18:    
+19:      <% SCORES = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] %>
+20:      <div class="field">
+21:        <%= form.label :ranking, class: "form-label" %>
+22:        <%= form.select :ranking, options_for_select(SCORES) %>
+23:      </div>
+24:    
+25:      <div class="field">
+26:        <%= form.label :comment, class: "form-label" %>
+27:        <%= form.text_area :comment, class: "form-control"%>
+28:      </div>
+29:    
+30:    <br>
+31:    
+32:      <div class="text-center"> 
+33:        <%= form.submit "Create Feedback", class: "btn btn-primary mb-2" %> 
+34:      </div>
+35:    <% end %>
+  
+app/views/feedbacks/_form.html.erb:19: dynamic constant assignment
+app/views/feedbacks/_form.html.erb:19: dynamic constant assignment
+app/views/feedbacks/_form.html.erb:19: dynamic constant assignment
+app/views/feedbacks/_form.html.erb:19: dynamic constant assignment
+app/views/feedbacks/_form.html.erb:19: dynamic constant assignment
+app/views/feedbacks/_form.html.erb:19: dynamic constant assignment
+app/views/feedbacks/new.html.erb:3
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 20:10:16 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:29
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:29
+  Rendered presentations/index.html.erb within layouts/application (Duration: 329.1ms | Allocations: 70973)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 202)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 755ms (Views: 751.6ms | ActiveRecord: 0.9ms | Allocations: 185290)
+
+
+Started GET "/users/17" for 127.0.0.1 at 2020-12-04 20:11:43 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 480)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 14.9ms | Allocations: 1375)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 95)
+Completed 200 OK in 568ms (Views: 413.6ms | ActiveRecord: 8.6ms | Allocations: 35915)
+
+
+Started GET "/feedbacks/new" for 127.0.0.1 at 2020-12-04 20:11:45 -0500
+Processing by FeedbacksController#new as HTML
+  Rendering feedbacks/new.html.erb within layouts/application
+  [1m[36mPresentation Load (0.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/feedbacks/_form.html.erb:16
+  Rendered feedbacks/_form.html.erb (Duration: 64.0ms | Allocations: 8872)
+  Rendered feedbacks/new.html.erb within layouts/application (Duration: 67.9ms | Allocations: 9177)
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 13.2ms | Allocations: 16009)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 10, expected 1..2)):
+    18: 
+    19:   <div class="field">
+    20:     <%= form.label :ranking, class: "form-label" %>
+    21:     <%= form.select :ranking, options_for_select(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) %>
+    22:   </div>
+    23: 
+    24:   <div class="field">
+  
+app/views/feedbacks/_form.html.erb:21
+app/views/feedbacks/_form.html.erb:1
+app/views/feedbacks/new.html.erb:3
+Started GET "/feedbacks/new" for 127.0.0.1 at 2020-12-04 20:12:31 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FeedbacksController#new as HTML
+  Rendering feedbacks/new.html.erb within layouts/application
+  [1m[36mPresentation Load (0.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/feedbacks/_form.html.erb:16
+  Rendered feedbacks/_form.html.erb (Duration: 132.8ms | Allocations: 8859)
+  Rendered feedbacks/new.html.erb within layouts/application (Duration: 137.5ms | Allocations: 9284)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 65.6ms | Allocations: 9986)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 95)
+Completed 200 OK in 596ms (Views: 512.1ms | ActiveRecord: 3.9ms | Allocations: 49389)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 20:12:41 -0500
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:29
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:29
+  Rendered presentations/index.html.erb within layouts/application (Duration: 134.2ms | Allocations: 9325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 4.9ms | Allocations: 210)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 281ms (Views: 271.6ms | ActiveRecord: 1.7ms | Allocations: 18444)
+
+
+Started GET "/feedbacks/new" for 127.0.0.1 at 2020-12-04 20:13:32 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FeedbacksController#new as HTML
+  Rendering feedbacks/new.html.erb within layouts/application
+  [1m[36mPresentation Load (3.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/feedbacks/_form.html.erb:16
+  Rendered feedbacks/_form.html.erb (Duration: 134.1ms | Allocations: 8713)
+  Rendered feedbacks/new.html.erb within layouts/application (Duration: 140.3ms | Allocations: 9138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 83.4ms | Allocations: 9986)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 95)
+Completed 200 OK in 679ms (Views: 608.6ms | ActiveRecord: 12.8ms | Allocations: 49235)
+
+
