@@ -1,19 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Presentation:</strong>
+<h1>Feedback</h1>
+
+<p class="show-field">
+  <strong>Presentation: </strong>
   <%= @feedback.presentation_id %>
 </p>
 
-<p>
-  <strong>Ranking:</strong>
+<p class="show-field">
+  <strong>Ranking: </strong>
   <%= @feedback.ranking %>
 </p>
 
-<p>
-  <strong>Comment:</strong>
+<p class="show-field"> 
+  <strong>Comment: </strong>
   <%= @feedback.comment %>
 </p>
 
-<%= link_to 'Edit', edit_feedback_path(@feedback) %> |
-<%= link_to 'Back', feedbacks_path %>
+<br>

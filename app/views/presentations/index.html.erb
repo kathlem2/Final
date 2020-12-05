@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Evaluations</h1>
+<h1>Presentations</h1>
 
 <table class="table table-striped">
   <thead class="thead-color">
@@ -15,18 +15,18 @@
     <% @presentations.each do |presentation| %> 
       <% if current_user.isTeacher %>
         <tr>
-          <td><%= presentation.group_id %></td>
+          <td><%= presentation.group.name %></td>
           <td><%= presentation.topic %></td>
           <td><%= link_to 'Show', presentation %></td>
           <td><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
           <td><%= link_to 'Destroy', presentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <td><%= link_to "View Feedback", feedbacks_path %></td>
+          <td><%= link_to "View Feedback", presentation %></td>
 
         </tr>
       <% else %>
         <% if presentation.group_id != current_user.group_id %>
           <tr>
-            <td><%= presentation.group_id %></td>
+            <td><%= presentation.group.name %></td>
             <td><%= presentation.topic %></td>
             <td><%= link_to 'Show', presentation %></td>
             <td><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
@@ -41,4 +41,6 @@
 
 <br>
 
-<div class="text-center"> <%= link_to 'New Presentation', new_presentation_path, class: "btn btn-primary mb-2"%> </div>
+<% if current_user.isTeacher %>
+  <div class="text-center"> <%= link_to 'New Presentation', new_presentation_path, class: "btn btn-primary mb-2"%> </div>
+<% end %>

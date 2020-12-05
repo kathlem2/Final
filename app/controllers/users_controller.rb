@@ -10,7 +10,9 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @presentations = Presentation.all
+    if @user.group_id != nil
+      @presentations = @user.group.presentations
+    end
   end
 
   # GET /users/new
