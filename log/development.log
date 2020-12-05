@@ -17208,3 +17208,547 @@ Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.0ms | Allocations: 846
 >>>>>>> ee86651e0a96a674caa83d3f599272186f825ad3
 
 
+Started GET "/groups" for 127.0.0.1 at 2020-12-04 19:21:37 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GroupsController#index as HTML
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:15
+  Rendered groups/index.html.erb within layouts/application (Duration: 33.8ms | Allocations: 4445)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 126.3ms | Allocations: 9824)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 95)
+Completed 200 OK in 959ms (Views: 916.3ms | ActiveRecord: 14.5ms | Allocations: 134355)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 19:21:46 -0500
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.3ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:18
+  [1m[36mCACHE Group Load (1.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:18
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:18
+  Rendered presentations/index.html.erb within layouts/application (Duration: 103.4ms | Allocations: 9687)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 233)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 162ms (Views: 132.7ms | ActiveRecord: 8.3ms | Allocations: 19810)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2020-12-04 19:21:50 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KLBP+M7Amfl9ayt7nEWfLHX3dK0gdBtLkY2rrUovoEQDrIV0xoBG9ksIuACMzIzThazESViYZ0U/9yWO3nEU+g=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 413)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-04 19:21:50 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 206)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.0ms | Allocations: 9135)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-12-04 19:21:51 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 17.8ms | Allocations: 2298)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.0ms | Allocations: 11215)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-12-04 19:21:54 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"1lv9Rf7/qc+UEtPlk/gi35OQDpMp62+h+UUQXGLaoMjd//hkMab/BRxLzGkVDGsfkyLhCY1K+6bku43IT/v3Lw==", "session"=>{"email"=>"student@osu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "student@osu.edu"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 312ms (ActiveRecord: 0.3ms | Allocations: 1163)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2020-12-04 19:21:54 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71:in `set_user'
+  [1m[36mGroup Load (4.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPresentation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "presentations" WHERE "presentations"."group_id" = ? LIMIT ?[0m  [["group_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:26
+  [1m[36mPresentation Load (0.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" WHERE "presentations"."group_id" = ?[0m  [["group_id", 1]]
+  ↳ app/views/users/show.html.erb:36
+  Rendered collection of presentations/_presentation.html.erb [2 times] (Duration: 2.7ms | Allocations: 235)
+  Rendered users/show.html.erb within layouts/application (Duration: 19.9ms | Allocations: 2674)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.8ms | Allocations: 812)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 86ms (Views: 65.5ms | ActiveRecord: 5.4ms | Allocations: 15316)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 19:22:00 -0500
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.1ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:29
+  Rendered presentations/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 2185)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 210)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.3ms | Allocations: 10679)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-12-04 19:22:15 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  Rendered users/index.html.erb within layouts/application (Duration: 30.6ms | Allocations: 4051)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 224)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 84ms (Views: 82.8ms | ActiveRecord: 0.7ms | Allocations: 12674)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-04 19:22:20 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 10.8ms | Allocations: 615)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 224)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 56ms (Views: 55.3ms | ActiveRecord: 0.2ms | Allocations: 9113)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-12-04 19:22:20 -0500
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:20
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/index.html.erb:33
+  Rendered users/index.html.erb within layouts/application (Duration: 29.5ms | Allocations: 3553)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 211)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 74ms (Views: 72.8ms | ActiveRecord: 0.6ms | Allocations: 12048)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 19:22:21 -0500
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.1ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:29
+  Rendered presentations/index.html.erb within layouts/application (Duration: 19.8ms | Allocations: 2173)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 210)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.4ms | Allocations: 10647)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2020-12-04 19:22:23 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71:in `set_user'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPresentation Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "presentations" WHERE "presentations"."group_id" = ? LIMIT ?[0m  [["group_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:26
+  [1m[36mPresentation Load (0.1ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" WHERE "presentations"."group_id" = ?[0m  [["group_id", 1]]
+  ↳ app/views/users/show.html.erb:36
+  Rendered collection of presentations/_presentation.html.erb [2 times] (Duration: 0.4ms | Allocations: 95)
+  Rendered users/show.html.erb within layouts/application (Duration: 50.0ms | Allocations: 1746)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.4ms | Allocations: 803)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 128ms (Views: 108.5ms | ActiveRecord: 2.2ms | Allocations: 12102)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 19:22:25 -0500
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:29
+  Rendered presentations/index.html.erb within layouts/application (Duration: 18.7ms | Allocations: 2163)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 202)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 63ms (Views: 61.4ms | ActiveRecord: 0.5ms | Allocations: 10627)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 19:24:44 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:29
+  Rendered presentations/index.html.erb within layouts/application (Duration: 82.5ms | Allocations: 20359)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 628)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 95)
+Completed 200 OK in 179ms (Views: 145.5ms | ActiveRecord: 5.7ms | Allocations: 46332)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 19:25:14 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:29
+  Rendered presentations/index.html.erb within layouts/application (Duration: 97.9ms | Allocations: 20359)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 633)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 95)
+Completed 200 OK in 221ms (Views: 197.4ms | ActiveRecord: 3.6ms | Allocations: 46323)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2020-12-04 19:25:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71:in `set_user'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPresentation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "presentations" WHERE "presentations"."group_id" = ? LIMIT ?[0m  [["group_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:26
+  [1m[36mPresentation Load (0.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" WHERE "presentations"."group_id" = ?[0m  [["group_id", 1]]
+  ↳ app/views/users/show.html.erb:36
+  Rendered collection of presentations/_presentation.html.erb [2 times] (Duration: 3.6ms | Allocations: 284)
+  Rendered users/show.html.erb within layouts/application (Duration: 23.7ms | Allocations: 2726)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.0ms | Allocations: 812)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 105ms (Views: 86.3ms | ActiveRecord: 0.9ms | Allocations: 15461)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 19:30:12 -0500
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.1ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:29
+  Rendered presentations/index.html.erb within layouts/application (Duration: 22.8ms | Allocations: 2073)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 210)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 125ms (Views: 123.6ms | ActiveRecord: 0.5ms | Allocations: 10640)
+
+
+Started GET "/users/12/edit" for 127.0.0.1 at 2020-12-04 19:30:16 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71:in `set_user'
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered users/_editUser.html.erb (Duration: 44.6ms | Allocations: 5110)
+  Rendered users/edit.html.erb within layouts/application (Duration: 61.0ms | Allocations: 6059)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 211)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 112ms (Views: 98.0ms | ActiveRecord: 0.3ms | Allocations: 15196)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2020-12-04 19:30:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71:in `set_user'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPresentation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "presentations" WHERE "presentations"."group_id" = ? LIMIT ?[0m  [["group_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:26
+  [1m[36mPresentation Load (0.1ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" WHERE "presentations"."group_id" = ?[0m  [["group_id", 1]]
+  ↳ app/views/users/show.html.erb:36
+  Rendered collection of presentations/_presentation.html.erb [2 times] (Duration: 0.3ms | Allocations: 95)
+  Rendered users/show.html.erb within layouts/application (Duration: 13.2ms | Allocations: 1746)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.6ms | Allocations: 805)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 84ms (Views: 74.9ms | ActiveRecord: 0.7ms | Allocations: 12202)
+
+
+Started GET "/presentations/2" for 127.0.0.1 at 2020-12-04 19:30:20 -0500
+Processing by PresentationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPresentation Load (0.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" WHERE "presentations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/presentations_controller.rb:68:in `set_presentation'
+  Rendering presentations/show.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/show.html.erb:6
+  [1m[36mFeedback Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "feedbacks" WHERE "feedbacks"."presentation_id" = ? LIMIT ?[0m  [["presentation_id", 2], ["LIMIT", 1]]
+  ↳ app/views/presentations/show.html.erb:10
+  [1m[36mFeedback Load (0.2ms)[0m  [1m[34mSELECT "feedbacks".* FROM "feedbacks" WHERE "feedbacks"."presentation_id" = ?[0m  [["presentation_id", 2]]
+  ↳ app/views/presentations/show.html.erb:22
+  Rendered collection of feedbacks/_feedback.html.erb [2 times] (Duration: 2.0ms | Allocations: 493)
+  Rendered presentations/show.html.erb within layouts/application (Duration: 38.5ms | Allocations: 8245)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 813)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 83ms (Views: 67.4ms | ActiveRecord: 1.9ms | Allocations: 19265)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2020-12-04 19:30:24 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71:in `set_user'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPresentation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "presentations" WHERE "presentations"."group_id" = ? LIMIT ?[0m  [["group_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:26
+  [1m[36mPresentation Load (0.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" WHERE "presentations"."group_id" = ?[0m  [["group_id", 1]]
+  ↳ app/views/users/show.html.erb:36
+  Rendered collection of presentations/_presentation.html.erb [2 times] (Duration: 0.6ms | Allocations: 100)
+  Rendered users/show.html.erb within layouts/application (Duration: 15.9ms | Allocations: 1748)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 8.8ms | Allocations: 812)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 70ms (Views: 57.0ms | ActiveRecord: 0.8ms | Allocations: 12182)
+
+
+Started GET "/presentations/3" for 127.0.0.1 at 2020-12-04 19:30:26 -0500
+Processing by PresentationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPresentation Load (0.1ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" WHERE "presentations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/presentations_controller.rb:68:in `set_presentation'
+  Rendering presentations/show.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/show.html.erb:6
+  [1m[36mFeedback Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "feedbacks" WHERE "feedbacks"."presentation_id" = ? LIMIT ?[0m  [["presentation_id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/show.html.erb:10
+  Rendered presentations/show.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1547)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.6ms | Allocations: 813)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 0.5ms | Allocations: 11274)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2020-12-04 19:30:30 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71:in `set_user'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPresentation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "presentations" WHERE "presentations"."group_id" = ? LIMIT ?[0m  [["group_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:26
+  [1m[36mPresentation Load (0.1ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" WHERE "presentations"."group_id" = ?[0m  [["group_id", 1]]
+  ↳ app/views/users/show.html.erb:36
+  Rendered collection of presentations/_presentation.html.erb [2 times] (Duration: 0.4ms | Allocations: 94)
+  Rendered users/show.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1740)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 9.6ms | Allocations: 803)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 68ms (Views: 55.2ms | ActiveRecord: 0.7ms | Allocations: 12177)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2020-12-04 19:30:41 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TtK382AQJXHZe0iR7Tz5GltfQPhquWdIgEu2P11uOPRlzn1/aFD6fu8Y2+r9terlqwTwHBJVG0YuMTgcyTCMSg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 408)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-04 19:30:41 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 200)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.0ms | Allocations: 9185)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-12-04 19:30:43 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 876)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms | Allocations: 9853)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-12-04 19:30:48 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"xMwXwp79mJBs2TRw0cLvmn+BZP8u9mUnuE0IzJ0MR/LPaBLjUaTOWuSAK/xXNqZafzOLZYpX8SCls5VYsC0QFQ==", "session"=>{"email"=>"sivilotti@paul", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sivilotti@paul"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 424ms (ActiveRecord: 0.2ms | Allocations: 1167)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2020-12-04 19:30:49 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:71:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 25)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 5.8ms | Allocations: 849)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 50ms (Views: 45.7ms | ActiveRecord: 0.3ms | Allocations: 9767)
+
+
+Started GET "/presentations" for 127.0.0.1 at 2020-12-04 19:30:54 -0500
+Processing by PresentationsController#index as HTML
+  Rendering presentations/index.html.erb within layouts/application
+  [1m[36mPresentation Load (0.1ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations"[0m
+  ↳ app/views/presentations/index.html.erb:15
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:18
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:18
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/index.html.erb:18
+  Rendered presentations/index.html.erb within layouts/application (Duration: 30.8ms | Allocations: 3925)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 232)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 90ms (Views: 88.9ms | ActiveRecord: 0.5ms | Allocations: 12494)
+
+
+Started GET "/presentations/2" for 127.0.0.1 at 2020-12-04 19:30:57 -0500
+Processing by PresentationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPresentation Load (0.1ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" WHERE "presentations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/presentations_controller.rb:68:in `set_presentation'
+  Rendering presentations/show.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/show.html.erb:6
+  [1m[36mFeedback Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "feedbacks" WHERE "feedbacks"."presentation_id" = ? LIMIT ?[0m  [["presentation_id", 2], ["LIMIT", 1]]
+  ↳ app/views/presentations/show.html.erb:10
+  [1m[36mFeedback Load (0.2ms)[0m  [1m[34mSELECT "feedbacks".* FROM "feedbacks" WHERE "feedbacks"."presentation_id" = ?[0m  [["presentation_id", 2]]
+  ↳ app/views/presentations/show.html.erb:22
+  Rendered collection of feedbacks/_feedback.html.erb [2 times] (Duration: 0.5ms | Allocations: 261)
+  Rendered presentations/show.html.erb within layouts/application (Duration: 15.3ms | Allocations: 2646)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 826)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 67ms (Views: 60.5ms | ActiveRecord: 0.7ms | Allocations: 12400)
+
+
+Started GET "/presentations/3" for 127.0.0.1 at 2020-12-04 19:31:00 -0500
+Processing by PresentationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPresentation Load (0.1ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" WHERE "presentations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/presentations_controller.rb:68:in `set_presentation'
+  Rendering presentations/show.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/presentations/show.html.erb:6
+  [1m[36mFeedback Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "feedbacks" WHERE "feedbacks"."presentation_id" = ? LIMIT ?[0m  [["presentation_id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/show.html.erb:10
+  Rendered presentations/show.html.erb within layouts/application (Duration: 13.7ms | Allocations: 1544)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 835)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 52ms (Views: 48.4ms | ActiveRecord: 0.6ms | Allocations: 11308)
+
+
+Started GET "/presentations/4" for 127.0.0.1 at 2020-12-04 19:31:02 -0500
+Processing by PresentationsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPresentation Load (0.2ms)[0m  [1m[34mSELECT "presentations".* FROM "presentations" WHERE "presentations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/presentations_controller.rb:68:in `set_presentation'
+  Rendering presentations/show.html.erb within layouts/application
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/presentations/show.html.erb:6
+  [1m[36mFeedback Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "feedbacks" WHERE "feedbacks"."presentation_id" = ? LIMIT ?[0m  [["presentation_id", 4], ["LIMIT", 1]]
+  ↳ app/views/presentations/show.html.erb:10
+  Rendered presentations/show.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1545)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 11.0ms | Allocations: 835)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 66ms (Views: 59.8ms | ActiveRecord: 0.6ms | Allocations: 11291)
+
+

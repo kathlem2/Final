@@ -13,7 +13,7 @@
 
   <tbody>
     <% @presentations.each do |presentation| %> 
-      <% if current_user.isTeacher %>
+      <% if teacher? %>
         <tr>
           <td><%= presentation.group.name %></td>
           <td><%= presentation.topic %></td>
@@ -28,9 +28,6 @@
           <tr>
             <td><%= presentation.group.name %></td>
             <td><%= presentation.topic %></td>
-            <td><%= link_to 'Show', presentation %></td>
-            <td><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
-            <td><%= link_to 'Destroy', presentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             <td><%= link_to "Complete Feedback", new_feedback_path %></td>
           </tr>
         <% end %>
