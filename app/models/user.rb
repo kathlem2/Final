@@ -3,7 +3,7 @@ class User < ApplicationRecord
   validates :email, format: { with: /[[:alnum:]+_.-]+@[[:alnum:].-]/ }, presence: true
   validates_uniqueness_of :email
   validates :name, presence: true
-  has_many :feedbacks
+  has_many :feedbacks, :dependent => :destroy
 
   # Checks that the supplied password is strong enough
   has_secure_password
