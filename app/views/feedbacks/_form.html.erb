@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :presentation, class: "form-label" %>
-    <%= form.collection_select :presentation_id, Presentation.all, :id, :topic, class: "form-control" %>
+    <%= form.collection_select :presentation_id, Presentation.where.not(group_id: current_user.group_id), :id, :topic, class: "form-control" %>
   </div>
 
   <div class="field">
