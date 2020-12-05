@@ -12,6 +12,7 @@ class GroupsController < ApplicationController
   # GET /groups/1.json
   def show
     @users = @group.users
+    @presentations = @group.presentations
   end
 
   # GET /groups/new

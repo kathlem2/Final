@@ -1,28 +1,44 @@
 <p id="notice"><%= notice %></p>
 
-<h1>My Evaluations</h1>
+<h1>About <%= @user.name %></h1>
 
-<table class="table table-striped">
-  <thead class="thead-color">
-    <tr>
-      <th>Group</th>
-      <th>Topic</th>
-      <th colspan="4">Options</th>
-    </tr>
-  </thead>
+<p class="show-field">
+  <strong>Name: </strong>
+  <%= @user.name %>
+</p>
 
-  <tbody>
-    <% @presentations.each do |presentation| %>
-        <% if presentation.group_id == current_user.group_id %>
-          <tr>
-            <td><%= presentation.group_id %></td>
-            <td><%= presentation.topic %></td>
-            <td><%= link_to "View Feedback", feedbacks_path %></td>
-          </tr>
-        <% end %>
+<p class="show-field">
+  <strong>Email: </strong>
+  <%= @user.email %>
+</p>
+
+<p class="show-field">
+  <strong>Group: </strong>
+  <% if @user.group_id != nil %>
+    <%= @user.group.name %>
+  <% else %>
+    <%= @user.group_id %>
+  <% end %>
+</p>
+
+<p class="show-field"><strong>Presentations: </strong></p>
+<% if @user.group_id != nil %>
+  <% if @user.group.presentations.any?%>
+    <table class="table table-striped">
+      <thead class="thead-color">
+        <tr>
+          <th>Group</th>
+          <th>Topic</th>
+          <th colspan="4">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @presentations %>
+      </tbody>
+    </table>
     <% end %>
-  </tbody>
-</table>
+<% else %>
+  <h5>No presentations.</h5>
+<% end %>
 
 <br>
-

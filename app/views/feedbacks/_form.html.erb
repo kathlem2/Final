@@ -13,17 +13,17 @@
 
   <div class="field">
     <%= form.label :presentation, class: "form-label" %>
-    <%= form.collection_select :presentation_id, Presentation.all, :id, :topic %>
+    <%= form.collection_select :presentation_id, Presentation.all, :id, :topic, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :ranking, class: "form-label" %>
-    <%= form.number_field :ranking, class: "form-control" %>
+    <%= form.number_field :ranking, class: "form-control", max: 10, min: 0 %>
   </div>
 
   <div class="field">
     <%= form.label :comment, class: "form-label" %>
-    <%= form.text_area :comment, class: "form-control" %>
+    <%= form.text_area :comment, class: "form-control"%>
   </div>
 
 <br>

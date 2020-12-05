@@ -1,23 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Group:</strong>
-  <%= @presentation.group_id %>
+<h1> <%= @presentation.topic %> </h1>
+
+<p class="show-field">
+  <strong>Group:</strong> <%= @presentation.group.name %>
 </p>
 
-<p>
-  <strong>Topic:</strong>
-  <%= @presentation.topic %>
-</p>
+<p class="show-field"><strong>Feedback: </strong></p>
+<% if @presentation.feedbacks.any? %>
+  <table class="table table-striped">
+    <thead class="thead-color">
+      <tr>
+        <th>Presentation</th>
+        <th>Ranking</th>
+        <th>Comment</th>
+        <th colspan="3">Options</th>
+      </tr>
+    </thead>
 
-<p>
-    <% if @presentation.feedbacks.any? %>
-      <strong>Feedback (<%= @presentation.feedbacks.count %>):</strong>
-      <ol class="feedbacks">
-        <%= render @feedbacks %>
-      </ol>
-    <% end %>
-</p>
+      <tbody>
+          <%= render @feedbacks %>
+      </tbody>
+  </table>
+<% else %>
+  <h5>No feedback.</h5>
+<% end %>
 
-<%= link_to 'Edit', edit_presentation_path(@presentation) %> |
-<%= link_to 'Back', presentations_path %>
+<br>
