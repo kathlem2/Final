@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :Group %>
-    <%= form.collection_select :group_id, Group.all, :id, :name %>
+    <%= form.collection_select :group_id, Group.all, :id, :name, { :include_blank => "No Group" } %>
   </div>
 
   <br>
