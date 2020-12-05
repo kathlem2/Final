@@ -1,19 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @group.name %>
-</p>
+<h1><%= @group.name %></h1> 
 
-<p>
-    <% if @group.users.any? %>
-      <strong>Users (<%= @group.users.count %>):</strong>
-      <ol class="users">
-        <%= render @users %>
-      </ol>
-    <% end %>
-</p>
+<p class="show-field"><strong>Members: </strong></p>
+<% if @group.users.any? %>
+  <table class="table table-striped">
+    <thead class="thead-color">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Group ID</th>
+        <th>Group Name</th>
+        <% if current_user.isTeacher %>
+          <th colspan="3">Options</th>
+        <% end %>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= render @users %>
+    </tbody>
+  </table>
+<% else %>
+  <h5>No members.</h5>
+<% end %>
 
 <br> 
-<%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Back', groups_path %>

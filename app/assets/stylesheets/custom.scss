@@ -52,6 +52,10 @@ h2 {
     color: black;
 }
 
+h5 {
+    font-style: italic;
+}
+
 p {
     font-size: 1.1em;
     line-height: 1.7em;
@@ -194,5 +198,10 @@ p a {
 .form-label {
     color: black;
     font-weight: bold;
+    font-size: 1.2em;
+}
+
+.show-field {
+    color: black;
     font-size: 1.2em;
 }
