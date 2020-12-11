@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_05_002204) do
+ActiveRecord::Schema.define(version: 2020_12_11_155334) do
 
   create_table "feedbacks", force: :cascade do |t|
     t.integer "presentation_id"
@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(version: 2020_12_05_002204) do
   create_table "presentations", force: :cascade do |t|
     t.integer "group_id"
     t.string "topic"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "rates", force: :cascade do |t|
+    t.integer "loves"
+    t.integer "likes"
+    t.string "song"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

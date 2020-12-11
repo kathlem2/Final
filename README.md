@@ -15,6 +15,9 @@ Evaluate is an online peer evaluation tool for presentations. Teachers and stude
 3. **"Show" Also Displays Associations:** To make it easier to determine associations between objects, the option to "show" an object also shows the objects associated with it. For example, when a teacher wants to "show" a group, they will see the group and the users associated with the group. The same concept applies to users and their presentations as well as presentations and their feedback.
 4. **Account->About Me:** The menu has an item Account->About Me. This page contains information about the current logged in user such as their name, email, group, and presentations. For students, this page is where they can view their presentation feedback from other students. This is different from the *Evaluate* page since students can only see other student's presentations on the *Evaluate* page (which ensures no self-evaluation). 
 
+## Database Defaults
+- Some default data has been populated in the database already, for testing purposes. All student accounts can be logged into with the password 'password', and the teacher account paul@sivilotti can be logged in with 'gobucks!'. 
+
 ## Development Information
 ### Classes
 **User:** 

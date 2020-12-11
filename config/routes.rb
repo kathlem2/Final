@@ -1,11 +1,4 @@
 Rails.application.routes.draw do
-  resources :feedbacks
-  resources :presentations
-  resources :groups
-  get '/signup', to: 'users#new'
-  get '/login', to: 'sessions#new'
-  post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
-  resources :users
+  resources :rates
   root 'static_pages#home'
 end

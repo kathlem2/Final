@@ -1,15 +1,21 @@
 <% provide(:title, 'Evaluate') %>
 <div class="center jumbotron">
 
-<img src="/assets/logo.png" alt="Evaluate logo" class="img-fluid">
- 
+<h1>
+  Evermore
+</h1>
+
 <h2>
-  An online peer evaluation tool for presentations.
+  by Taylor Swift
+</h2>
+
+
+<img src="/assets/TS.png" alt="Evaluate logo" class="img-fluid">
+
+<h2>
+  Click the link below to rate your favorite new songs!
 </h2>
   
-  <% if logged_in? %>
-  <% else %>
-  <%= link_to "Sign up now!", 'users/new', class: "btn btn-lg btn-primary" %>
-  <% end %>
+  <%= link_to "Rate Now!", rates_path, class: "btn btn-lg btn-primary" %>
   
 </div>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Evermore</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Loves</th>
+      <th>Likes</th>
+      <th>Song</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rates.each do |rate| %>
+      <tr>
+        <td><%= rate.loves %></td>
+        <td><%= rate.likes %></td>
+        <td><%= rate.song %></td>
+        <td><%= link_to 'Love', edit_rate_path(rate) %></td>
+        <td><%= link_to 'Like', edit_rate_path(rate)  %></td>
+        <td><%= link_to 'Show', rate %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

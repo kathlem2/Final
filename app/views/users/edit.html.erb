@@ -1,8 +1,0 @@
-<h1>Editing User</h1>
-
-
-  <% if current_user.isTeacher %> 
-    <%= render 'teacheredit', user: @user %>
-  <% else %> 
-    <%= render 'editUser', user: @user %>
-  <% end %> 
